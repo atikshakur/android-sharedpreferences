@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dependency="http://schemas.android.com/tools">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="checkbox_key"
+        android:summary="Turn this on to edit settings"
+        android:title="Enable Settings" />
+
+    <PreferenceCategory
+        android:dependency="checkbox_key"
+        android:title="Settings">
+        <SeekBarPreference
+            android:defaultValue="5"
+            android:key="seekbar"
+            android:max="10"
+            android:summary="This is a seekbar"
+            android:title="Seekbar" />
+
+        <EditTextPreference
+            android:dialogTitle="Enter your name"
+            android:key="name"
+            android:title="Enter your name"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:dialogTitle="Gender"
+            android:entries="@array/gender_entries"
+            android:entryValues="@array/gender_entries_values"
+            android:key="gender"
+            android:title="Gender"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
+
+

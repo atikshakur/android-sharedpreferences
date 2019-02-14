@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_entries">
+        <item>"Male"</item>
+        <item>"Female"</item>
+    </string-array>
+
+    <string-array name="gender_entries_values">
+        <item>"Male"</item>
+        <item>"Female"</item>
+    </string-array>
+</resources>
