@@ -6,6 +6,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">@color/White</item>
+        <item name="textColor">@color/Dark</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_keyboard_arrow_left_black_24dp</item>
+    </style>
+
+    <!--Dark Theme -->
+    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDarkMode</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDarkMode</item>
+        <item name="colorAccent">@color/colorAccentDarkMode</item>
+        <item name="backgroundColor">@color/colorPrimaryDarkMode</item>
+        <item name="textColor">@color/White</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_keyboard_arrow_left_black_24dp</item>
     </style>
 
 </resources>

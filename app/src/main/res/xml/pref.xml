@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:dependency="http://schemas.android.com/tools">
-
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="checkbox_key"
-        android:summary="Turn this on to edit settings"
-        android:title="Enable Settings" />
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Settings">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="checkbox_key"
+            android:summary="Turn this on to edit settings"
+            android:title="Enable Settings" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:dependency="checkbox_key"
-        android:title="Settings">
+        android:title="Info">
         <SeekBarPreference
             android:defaultValue="5"
             android:key="seekbar"
@@ -35,6 +35,15 @@
 
     </PreferenceCategory>
 
-</androidx.preference.PreferenceScreen>
+    <PreferenceCategory
+        android:key="DarkMode"
+        android:title="Dark Mode">
 
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="dark_mode"
+            android:title="Dark Mode" />
 
+    </PreferenceCategory>
+
+</PreferenceScreen>

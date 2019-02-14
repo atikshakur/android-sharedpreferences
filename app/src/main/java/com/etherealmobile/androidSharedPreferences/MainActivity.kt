@@ -15,8 +15,15 @@ class MainActivity : AppCompatActivity() {
         const val NAME_KEY = "name"
         const val GENDER_KEY = "gender"
     }
+    lateinit var prefs: MySharedPref
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        prefs = MySharedPref(this)
+        when(prefs.getNightModeState()) {
+            true -> setTheme(R.style.DarkTheme)
+            false -> setTheme(R.style.AppTheme)
+        }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -28,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         name.text = prefs.getString(NAME_KEY, "Name")
         gender.text = prefs.getString(GENDER_KEY, "Male")
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
